@@ -8,3 +8,10 @@ githubpy
 keyring
 pyqode-uic
 pyqt-distutils
+
+PyQt5
+future
+setuptools
+SecretStorage
+Pillow
+distro
