@@ -24,6 +24,12 @@ bugs in OCIDE until the final 1.0 version of HackEdit is ready.*
 
 .. _HackEdit: https://github.com/HackEdit/hackedit
 
+4.7.7
+-----
+
+Fixed bugs:
+- fix crash on linux with python >= 3.8
+
 4.7.6
 -----
 
