@@ -8,6 +8,7 @@ import os
 import platform
 import shlex
 import sys
+import distro
 
 from pyqode.qt import QtGui
 
@@ -16,10 +17,9 @@ windows = platform.system() == 'Windows'
 darwin = platform.system() == 'Darwin'
 linux = platform.system() == 'Linux'
 if linux:
-    ubuntu = platform.linux_distribution()[0].lower() == 'ubuntu'
+    ubuntu = distro.id() == 'ubuntu'
 else:
     ubuntu = False
-
 
 def _mkdir(func):
     @functools.wraps(func)
@@ -31,7 +31,6 @@ def _mkdir(func):
             pass
         return ret
     return wrapper
-
 
 def which(cmd, mode=os.F_OK | os.X_OK, path=None,
           include_settings_path=True):
